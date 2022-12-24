@@ -1,6 +1,5 @@
 charset,OSNative
-file,README.md6264e82bed559ef2647ac688b346ab91size=429date=2022-12-23T21:37:44
-file,developer_options.txt3add75582a07fd6c61865f80e9ccfbcbsize=47date=2022-12-23T21:43:01
+file,developer_options.txta971ca84a320eeafa3f73c7ec5a69c47size=73date=2022-12-23T21:55:57
 file,ghost/master/aitalk.dic01b07024a275d968ff9d644c6464cd94size=162date=2022-12-01T21:32:40
 file,ghost/master/boot.dic6319ff2eadd1177a0637b79bc94547f4size=1018date=2022-12-20T05:15:02
 file,ghost/master/descript.txt58521da707b19088b08349d83b1429a5size=238date=2022-12-18T17:39:46
@@ -74,7 +73,7 @@ file,ghost/master/yaya_lessons/module_09_saori/02_saori-basic.dic53277dbab272e0
 file,ghost/master/yaya_lessons/module_10_yaya_libraries/00_yaya_as_shiori.dic88fbb8f28f01c9d03edf90c92795315bsize=2635date=2022-12-14T01:03:21
 file,ghost/master/yaya_lessons/module_11_debugging/01_logging.dic728da4e81dd359bfe7f32a2c1affe581size=3309date=2022-12-14T01:05:08
 file,install.txtb2aee6c523599e10e018adac1f88407dsize=73date=2022-12-18T17:40:27
-file,readme.txt2f3a95104efdb56a6aeab76282463fbdsize=819date=2022-12-23T21:48:21
+file,readme.txt2ffedbe65224289ad144501c5075ffd2size=918date=2022-12-23T21:57:32
 file,shell/master/descript.txt87d2b66252d3bc20f46e7b6f0d639003size=179date=2022-12-16T04:26:04
 file,shell/master/readme.txtb95cc9ba23d62a1c4a05aab73daa6943size=52date=2022-12-16T04:25:47
 file,shell/master/surface0.png2d214faacb423e88d6d90a3df13db38bsize=29768date=2022-12-15T02:54:38
