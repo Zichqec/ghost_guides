@@ -74,7 +74,7 @@ file,ghost/master/yaya_lessons/module_09_saori/02_saori-basic.dic53277dbab272e0
 file,ghost/master/yaya_lessons/module_10_yaya_libraries/00_yaya_as_shiori.dic88fbb8f28f01c9d03edf90c92795315bsize=2635date=2022-12-14T01:03:21
 file,ghost/master/yaya_lessons/module_11_debugging/01_logging.dic728da4e81dd359bfe7f32a2c1affe581size=3309date=2022-12-14T01:05:08
 file,install.txtb2aee6c523599e10e018adac1f88407dsize=73date=2022-12-18T17:40:27
-file,readme.txt35b12937c73148805f18ddcc2d89d69asize=757date=2022-12-20T04:35:37
+file,readme.txt2f3a95104efdb56a6aeab76282463fbdsize=819date=2022-12-23T21:48:21
 file,shell/master/descript.txt87d2b66252d3bc20f46e7b6f0d639003size=179date=2022-12-16T04:26:04
 file,shell/master/readme.txtb95cc9ba23d62a1c4a05aab73daa6943size=52date=2022-12-16T04:25:47
 file,shell/master/surface0.png2d214faacb423e88d6d90a3df13db38bsize=29768date=2022-12-15T02:54:38
