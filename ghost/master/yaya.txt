@@ -38,3 +38,4 @@ msglang,english
 // log, ayame.log	
 ignoreiolog, ID: OnSecondChange //Ignores OnSecondChange
 ignoreiolog, ID: OnMouse        //Ignores all OnMouse functions
+//please fix the md5 cmon

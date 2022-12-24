@@ -1,4 +1,4 @@
-developer_options.txta971ca84a320eeafa3f73c7ec5a69c47size=73date=2022-12-23T21:55:57charset=OSNative
+developer_options.txt0c5a76ed178b9da73eef491add26cb57size=119date=2022-12-23T22:01:10charset=OSNative
 ghost/master/aitalk.dic01b07024a275d968ff9d644c6464cd94size=162date=2022-12-01T21:32:40
 ghost/master/boot.dic6319ff2eadd1177a0637b79bc94547f4size=1018date=2022-12-20T05:15:02
 ghost/master/descript.txt58521da707b19088b08349d83b1429a5size=238date=2022-12-18T17:39:46
@@ -6,7 +6,6 @@ ghost/master/examplefiles/readexample.txtc0553c4f988117a5b2718e37b7393570size=
 ghost/master/main.dic8660fe8ccb3fbc54203fed4444cd3ce0size=5857date=2022-12-20T04:33:46
 ghost/master/meta.dic5abf0a258c24f24ff188265d20a1c836size=3819date=2022-12-20T04:24:21
 ghost/master/sakura_menu.dicc855c79b5ea8addb728437e3cb2fe17asize=11277date=2022-12-20T05:15:08
-ghost/master/saori/histomachine.exec99e507b9f711f62bf771198b17f70bcsize=24634921date=2022-12-18T21:08:35
 ghost/master/saori/histomachine.txt218c3da82312e0a288e53c3c8e4c3cc3size=1788date=2022-12-18T21:08:35
 ghost/master/saori/proxy_ex.dll8ff13a8c1b2b0261f61704c1f457cc8csize=48128date=2018-10-13T03:36:55
 ghost/master/saori/window_info.dllf746413fcc0f999f61363b81a80d0bd5size=49152date=2016-11-24T10:21:09
@@ -15,7 +14,7 @@ ghost/master/saori/window_info_readme.txt6ce8e394a553baa370f67211af2b4faesize=
 ghost/master/tools.dic44d9eb773703fb4564cf8efb3985f776size=2041date=2022-12-20T04:31:59
 ghost/master/word.dic817eac9e58587c7784bae75e125577c0size=3352date=2022-12-20T04:33:06
 ghost/master/yaya.dll56e3af56c88e696cea1f39d53b239cefsize=880640date=2022-09-10T18:18:59
-ghost/master/yaya.txtc09384ff591111eea9c567772c380ffcsize=1352date=2022-12-20T04:34:14
+ghost/master/yaya.txt8bfe0af3388b4799f5c166b33952d9basize=1379date=2022-12-23T22:03:09
 ghost/master/yaya_base/_loading_order.txt9c350c2c9c08f635bff5eaae149af8c8size=103date=2022-10-26T21:00:32
 ghost/master/yaya_base/compatible.dic4f8b1e8c8c08dc44e70b1bd4f52a1affsize=4297date=2022-10-26T21:00:32
 ghost/master/yaya_base/config.dicacc9b7c3f25c4e564abdac847f103cddsize=2648date=2022-10-26T21:00:32
