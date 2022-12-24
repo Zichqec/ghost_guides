@@ -1,0 +1,46 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+
+/******************************************************************
+
+OnExample.M1.L2.SingleLineComment
+{
+	"Hello, world!" //This is a single line comment, it does not affect the code and is only here to help your code be understood.
+}
+
+******************************************************************/
+
+OnExample.M1.L2.SingleLineComment
+{
+	"Hello, world!" //This is a single line comment, it does not affect the code and is only here to help your code be understood.
+}
+
+
+
+//This one is commented differently because... you can't nest multiline comments... but this example isn't really one you need to mess with, is it? If you happen to be reading this, hi!
+///////////////////////////////////////////////////////////////////
+
+// OnExample.M1.L2.MultiLineComment
+// {
+	/* This is a multi-line comment
+	You can use this for longer explanations of your code,
+	or to comment out entire functions if you need to.
+	It's very useful for debugging, as well. */
+	// "Hello, world!"
+// }
+
+///////////////////////////////////////////////////////////////////
+
+OnExample.M1.L2.MultiLineComment
+{
+	/* This is a multi-line comment
+	You can use this for longer explanations of your code,
+	or to comment out entire functions if you need to.
+	It's very useful for debugging, as well. */
+	"Hello, world!"
+}

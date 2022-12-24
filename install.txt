@@ -1,0 +1,5 @@
+charset,UTF-8
+type,ghost
+
+name,Ghost Guides
+directory,ghost_guides_zi

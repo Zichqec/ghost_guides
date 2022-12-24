@@ -1,0 +1,9 @@
+surface0
+{
+	collision,0,0,150,65,head
+}
+
+surface10
+{
+	collision,0,0,150,65,head
+}

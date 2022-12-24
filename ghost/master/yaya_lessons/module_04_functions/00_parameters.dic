@@ -1,0 +1,120 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+/******************************************************************
+
+OnExample.M4.L0.SumFunction
+{
+	Sum(1,2)
+}
+
+Sum
+{
+	_argv[0] + _argv[1]
+}
+
+******************************************************************/
+
+OnExample.M4.L0.SumFunction
+{
+	Sum(1,2)
+}
+
+Sum
+{
+	_argv[0] + _argv[1]
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L0.CountFunction
+{
+	CountA("red","orange","yellow","green","cyan","blue","purple","magenta")
+}
+
+CountA
+{
+	_argc
+}
+
+******************************************************************/
+
+OnExample.M4.L0.CountFunction
+{
+	CountA("red","orange","yellow","green","cyan","blue","purple","magenta")
+}
+
+CountA
+{
+	_argc
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L0.CountFunction2
+{
+	_hues = ("red","orange","yellow","green","cyan","blue","purple","magenta")
+	
+	CountB(_hues)
+}
+
+CountB
+{
+	_argc
+}
+
+******************************************************************/
+
+OnExample.M4.L0.CountFunction2
+{
+	_hues = ("red","orange","yellow","green","cyan","blue","purple","magenta")
+	
+	CountB(_hues)
+}
+
+CountB
+{
+	_argc
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L0.FeedbackOperator
+{
+	_fav = "red"
+	_secondfav = "green"
+	ChangeFav(&_fav,_secondfav)
+	"I like " + _fav + " and " + _secondfav
+}
+
+ChangeFav
+{
+	_argv[0] = "blue"
+	_argv[1] = "yellow"
+}
+
+******************************************************************/
+
+OnExample.M4.L0.FeedbackOperator
+{
+	_fav = "red"
+	_secondfav = "green"
+	ChangeFav(&_fav,_secondfav)
+	"I like " + _fav + " and " + _secondfav
+}
+
+ChangeFav
+{
+	_argv[0] = "blue"
+	_argv[1] = "yellow"
+}

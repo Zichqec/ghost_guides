@@ -1,0 +1,361 @@
+SakuraMenuGreetings : nonoverlap
+{
+	"Hello."
+	"How can I help you?"
+}
+
+//Because there is an all modifier here, you don't need to write -- between menu options
+OnSakuraMenu : all
+{
+	"\0\b2\![set,autoscroll,disable]"
+	if IsEmergencyMode; "\![quicksection,1]%(FirstError)"
+	elseif _argv[0] == "start"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
+	
+	"\n\n\![quicksection,1]"
+	"\![*]\q[Open guide,OnOpenGuide]\n"
+	
+	if IsEmergencyMode
+	{
+		"\![*]\f[color,disable]Run example code from a lesson\f[color,default]\n"
+		"\![*]\q[Open lessons folder,OnOpenLessonsFolder]\n"
+		"\![*]\q[See error log,OnErrorLog] \__q[OnDebuggingHelp](Debugging info)\__q\n"
+	}
+	else
+	{
+		"\![*]\q[Run example code from a lesson,OnLessonMenu]\n"
+		"\![*]\q[Open lessons folder,OnOpenLessonsFolder]\n"
+		"\![*]\f[color,disable]See error log \__q[OnDebuggingHelp](Debugging info)\__q\f[color,default]\n"
+	}
+	
+	"\![*]\q[Ghost Info,OnGhostInfo]\n\n"
+	
+	"\![*]\q[Settings,OnConfig]\n"
+	"\![*]\q[Credits,OnCredits]\n"
+	"\n\n"
+	"\![*]\q[Nevermind,]\n"
+	"\f[height,-2]\f[color,disable]v%(ghostver)"
+}
+
+
+//———————————————————————————————————————— Config Menu ————————————————————————————————————————
+OnConfig : all
+{
+	OnFixDefaultValues
+	
+	//This just makes a label, if you change the default talkrate or add any new talkrates you'll need to fuss with this. Otherwise you can leave it be
+	_talkrate = "3 minutes"
+	if aitalkinterval == 30; _talkrate = "30 seconds"
+	elseif aitalkinterval == 60; _talkrate = "1 minute"
+	elseif aitalkinterval == 300; _talkrate = "5 minutes"
+	elseif aitalkinterval == 600; _talkrate = "10 minutes"
+	
+	//The extra tag here makes the anchor color not change after it has been clicked. Anchors are great for highlighting stuff because they will suit multiple balloons!
+	"\0\b2\_q\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]"
+	"\f[align,center]%(emdash) Settings %(emdash)\n\n\f[align,left]"
+	
+	"Username: \![*]\_a[OnConfig.Prefs]%username\_a\n"
+	
+	"Talk rate: \![*]\_a[OnConfig.TalkRate]%(_talkrate)\_a\n\n"
+	
+	"Show menu when running example code?\n"
+	"\![*]\_a[OnConfig.ExampleMenu]%(examplemenu)\_a\n\n"
+	
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,]"
+	
+}
+
+//If you add more toggles, make sure you set their initial values here so they're never blank
+OnFixDefaultValues
+{
+	if aitalkinterval == ""; aitalkinterval = TALK_INTERVAL //TALK_INTERVAL is defined over in yaya_base/config.dic
+	if examplemenu == ""; examplemenu = "Yes"
+}
+
+OnConfig.Name
+{
+	if reference0 == "default"
+	{
+		username = SHIORI3FW.UserName
+		OnConfig
+	}
+	else
+	{
+		"\![open,inputbox,OnConfig.NameInput,-1]\*"
+		--
+		"\0What would you like your name to be?"
+		--
+		"\n\n\![*]\q[Nevermind,OnConfig]"
+	}
+}
+
+OnConfig.NameInput
+{
+	_temp = reference0
+	_temp = REPLACE(_temp,"\","\\")
+	username = _temp
+	OnConfig
+}
+
+OnConfig.Prefs
+{
+	"\![open,configurationdialog,setup]"
+}
+
+OnConfig.TalkRate : all
+{
+	"\0\b2\![set,autoscroll,disable]\_q"
+	
+	"\![*]\q[30 seconds,OnConfig.TalkRateChange,30]\n"
+	"\![*]\q[1 minute,OnConfig.TalkRateChange,60]\n"
+	"\![*]\q[3 minutes,OnConfig.TalkRateChange,180]\n"
+	"\![*]\q[5 minutes,OnConfig.TalkRateChange,300]\n"
+	"\![*]\q[10 minutes,OnConfig.TalkRateChange,600]\n"
+	"\n"
+	"\![*]\q[Nevermind,OnConfig]"
+}
+
+OnConfig.TalkRateChange
+{
+	aitalkinterval = TOINT(reference0)
+	OnConfig
+}
+
+OnConfig.ExampleMenu : all
+{
+	"\0\b2\![set,autoscroll,disable]\_qShow menu when running example code?\n\n"
+	
+	"\![*]\q[Yes,OnConfig.ExampleMenuChange,Yes]\n"
+	"\![*]\q[Not when clicking links in the guide,OnConfig.ExampleMenuChange,Not when clicking links in the guide]\n"
+	"\![*]\q[Only when clicking links in the guide,OnConfig.ExampleMenuChange,Only when clicking links in the guide]\n"
+	"\![*]\q[No,OnConfig.ExampleMenuChange,No]\n"
+	"\n"
+	"\![*]\q[Nevermind,OnConfig]"
+}
+
+OnConfig.ExampleMenuChange
+{
+	examplemenu = reference0
+	OnConfig
+}
+
+OnOpenGuide
+{
+	"\j[https://zichqec.github.io/YAYA_Fundamentals/]"
+}
+
+OnLessonMenu : all
+{
+	_examples = GETFUNCLIST("OnExample.")
+	
+	"\0\b2\_q\![set,autoscroll,disable]\*"
+	//"— %(reference) —\n"
+	
+	_func = "OnLessonMenu"
+	_refs = "%(reference0)"
+	if reference0 == ""; {_func = "OnSakuraMenu"; _refs = ""}
+	elseif reference1 == ""; _refs = ""
+	
+	
+	_back = "\![*]\q[Back,%(_func),%(_refs)]\n\n"
+	if reference1 != "" //Pick example menu
+	{
+		_name = LessonList(reference0)[reference1]
+		"\f[align,center] Lesson %(_name) \n\n\f[align,left]"
+		_back
+		
+		_filter = "OnExample.M%(reference0).L%(reference1)."
+		
+		foreach _examples; _example
+		{
+			if _filter _in_ _example
+			{
+				_example = SPLIT(_example,".")[3]
+				"\![*]\q[""On%(_example)"",OnRunExampleCode,%(reference0),%(reference1),""%(_example)""]\n"
+			}
+		}
+	}
+	elseif reference0 != "" //Pick lesson menu
+	{
+		_name = ModuleList[reference0][0]
+		"\f[align,center] %(_name) \n\n\f[align,left]"
+		_back
+		foreach LessonList(reference0); _lesson
+		{
+			if _lesson[1] == "*"
+			{
+				"\![*]\f[color,disable]%(_lesson[0])\f[color,default]\n"
+			}
+			else
+			{
+				_num = SPLIT(_lesson," - ")[0]
+				_num = REPLACE(_num,"Module ","")
+				_num = TOINT(_num)
+				
+				"\![*]\q[%(_lesson),OnLessonMenu,%(reference0),%(_num)]\n"
+			}
+		}
+	}
+	else //Pick module menu
+	{
+		"\f[align,center] Run example code from... \n\n\f[align,left]"
+		_back
+		foreach ModuleList; _module
+		{
+			if _module[1] == "*"
+			{
+				"\![*]\f[color,disable]%(_module[0])\f[color,default]\n"
+			}
+			else
+			{
+				_num = SPLIT(_module," - ")[0]
+				_num = TOINT(REPLACE(_num,"Module ",""))
+				"\![*]\q[%(_module),OnLessonMenu,%(_num)]\n"
+			}
+		}
+	}
+	"\n"
+	_back
+}
+
+OnRunExampleCode : all
+{
+	_refs = ""
+	if reference2 == "CheckForRed"; _refs = "red"
+	elseif reference2 == "BuggyFunction"; _refs = "red,vibrant"
+	
+	if examplemenu == "Yes" ||/
+	(examplemenu == "Only when clicking links in the guide" && reference3 == "from link") ||/
+	(examplemenu == "Not when clicking links in the guide" && !(reference3 == "from link"))
+	{
+		"\C\![lock,balloonrepaint]\c\0\b[0]\![set,autoscroll,disable]"
+		
+		
+		"\n\n\n\![quicksection,true]\f[align,center]"
+		"\f[name,calibri]————————————\f[name,default]\n"
+		"On%(reference2)\n\n"
+		
+		
+		
+		if reference2 == "CheckForRed" || reference2 == "BuggyFunction"
+		{
+			"\![*]\__q[OnRunExampleCode,%(reference0),%(reference1),""%(reference2)""]Run code again with references (%(_refs))\__q\n\![*]\__q[OnRunExampleCode,%(reference0),%(reference1),""%(reference2)"",norefs]Run code again without references\__q\n"
+		}
+		else
+		{
+			"\![*]\q[Run code again,OnRunExampleCode,%(reference0),%(reference1),""%(reference2)""]  "
+		}
+		
+		if reference0 == "6" //File management module
+		{
+			"\![*]\q[Open examplefiles folder,OnOpenExampleFilesFolder]\n"
+		}
+		
+		"\![*]\q[Back,OnLessonMenu,%(reference0),%(reference1)]  \![*]\q[Dismiss,]\![unlock,balloonrepaint]\![quicksection,false]\_l[0,0]"
+		
+	}
+	if reference3 == "norefs"; _refs = ""
+	
+	"\![embed,OnExample.M%(reference0).L%(reference1).%(reference2),%(_refs)]"
+	
+}
+
+OnOpenExampleFilesFolder
+{
+	"\![open,explorer,ghost/master/examplefiles/]"
+}
+
+OnOpenLessonsFolder
+{
+	"\![open,explorer,ghost/master/yaya_lessons/]"
+}
+
+OnErrorLog : all
+{
+	_num = ARRAYSIZE(GETERRORLOG)
+	"\0\b[2]\_q\![set,autoscroll,disable]\*"
+	if _num >= 2560
+	{
+		"Too many errors to display the full list; please see the SHIORI log or Tama for the full list. The first errors are not listed here."
+	}
+	else
+	{
+		"%(_num) errors found."
+	}
+	"\n\n"
+	"\![*]\q[Back,OnSakuraMenu]\n\n"
+	
+	foreach ListErrors; _error
+	{
+		_error + "\n\n"
+	}
+	
+	"\![*]\q[Back,OnSakuraMenu]"
+}
+
+
+OnDebuggingHelp : all
+{
+	"\0\b[2]\_q\![set,autoscroll,disable]\*"
+	"\![*]\q[How to read error messages,OnHowToReadErrors]\n"
+	"\![*]\q[Common error messages,OnCommonErrors]\n"
+	"\![*]\q[Tama / Debugging tool,OnTamaLink]\n\n"
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,]"
+}
+
+OnHowToReadErrors
+{
+	"\j[https://zichqec.github.io/YAYA_Fundamentals/module_11_debugging/02_dissecting_error_messages.html]"
+}
+
+OnCommonErrors
+{
+	"\j[https://zichqec.github.io/YAYA_Fundamentals/module_11_debugging/03_common_error_messages.html]"
+}
+
+OnTamaLink
+{
+	"\j[https://github.com/YAYA-shiori/tama]"
+}
+
+OnGhostInfo
+{
+	GhostInfo
+	--
+	"\_q\n\n\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,]"
+}
+
+GhostInfo
+{
+	"This ghost is intended to serve as a companion for the @YAYA Fundamentals guide.\w8 You may use it independently if you like,\w4 but it may not be as helpful outside that context.\x"
+	--
+	"This ghost is pretty barebones for now.\w8 I hope to fully flesh it out one day,\w4 but for now it just runs example code from the lessons,\w4 and displays errors.\x"
+	--
+	"If used with the guide,\w4 you can click on the links under the code boxes to run that code in this ghost.\w8 If that does not work for you,\w4 you can also run the code from this ghost's menu.\w8 Modules and lessons that are grayed out do not have any code available to run.\x"
+	--
+	"You \f[italic,1]can\f[italic,default] and \f[italic,1]should\f[italic,0] edit the example code and play with it for yourself to gain a better understanding of how it all works.\w8 It is all stored in this ghost's folder, in \_?ghost/master/yaya_lessons/\_?.\w8 It is divided up into folders for each module, and one .dic file for each lesson.\x"
+	--
+	"Each code example has a duplicate in a comment above it.\w8 If for any reason you should change a function and not know how to get it back to how it was,\w4 you can copy the code from these comments to start fresh again.\w8 Mess with the functions to your heart's content.\x"
+	--
+	"If there is an error in the lesson files,\w4 the ghost will still function,\w4 but will not be able to run any example code.\w8 It will display the first error in the error log, if it can.\w8 You will need to fix any errors before being able to run code again.\w8 There are links to debugging information in the menu.\x"
+	--
+	"Some example code makes use of your username,\w4 which is taken from SSP's preferences menu.\w8 You can change your name in the SSP preferences,\w4 on the General tab.\x"
+	--
+	"That's all for now.\w8 If you've found a bug in the ghost,\w4 please contact @Zichqec."
+}
+
+OnCredits : all
+{
+	"\0\b[2]\_q\*\![set,autoscroll,disable]"
+	"\f[align,center]%(emdash) Credits %(emdash)\n \n\f[align,left]"
+	"YAYA Fundamentals Guide and Ghost Guides developer:\n@Zichqec\n"
+	"\n\n"
+	"Beta readers:\n\n"
+	"\_a[https://github.com/Ayakamtka]Ayakamtka\_a\n"
+	"\_a[https://ecclysium.github.io/]Ecclysium\_a\n"
+	"\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a\n"
+	"\_a[https://github.com/nimanao]Nimanao\_a\n"
+	"\_a[https://github.com/pommy15642]Pommy\_a\n"
+	"\_a[https://github.com/steve02081504]steve02081504\_a\n"
+	"\n\n"
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,]"
+}

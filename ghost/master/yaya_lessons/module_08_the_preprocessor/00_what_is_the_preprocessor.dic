@@ -1,0 +1,73 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+
+/******************************************************************
+
+#define ketchup mustard
+
+OnExample.M8.L0.ReplaceDialogueAndVarName
+{
+	ketchup++
+	
+	"I like ketchup"
+}
+
+******************************************************************/
+
+#define ketchup mustard
+
+OnExample.M8.L0.ReplaceDialogueAndVarName
+{
+	ketchup++
+	
+	"I like ketchup"
+}
+
+
+
+/******************************************************************
+
+#define START {
+#define END }
+
+OnExample.M8.L0.ReplaceBrackets
+START
+	"Hello, world!"
+END
+
+******************************************************************/
+
+#define START {
+#define END }
+
+OnExample.M8.L0.ReplaceBrackets
+START
+	"Hello, world!"
+END
+
+
+
+/******************************************************************
+
+#globaldefine card skate
+#define card cork
+
+OnExample.M8.L0.ReplaceOrder
+{
+	"cardboard"
+}
+
+******************************************************************/
+
+#globaldefine card skate
+#define card cork
+
+OnExample.M8.L0.ReplaceOrder
+{
+	"cardboard"
+}

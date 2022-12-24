@@ -1,0 +1,42 @@
+OnFirstBoot
+{
+	//If you add variables, make sure to initialize them here!
+	examplemenu = "Yes"
+	
+	"\1\s[-1]\0\s[0]"
+	--
+	GhostInfo
+}
+
+OnBoot
+{
+	//If you want some variables to reset on boot, put them here
+	
+	_today = "%(_month)/%(_day)" //If you want to use D/M, switch this around
+	_userbirthday = "%(SHIORI3FW.UserBirthday[1,':'])/%(SHIORI3FW.UserBirthday[2,':'])" //This one too
+	
+	"\1\s[-1]\0\s[0]"
+	--
+	if _today == _userbirthday
+	{
+		"\0Happy birthday,\w4 %username.\w8 That is all."
+	}
+	elseif _today == "1/1" //You can add whatever cool dates you want here
+	{
+		"It's new year's day.\w8 Happy %(year),\w4 %username.\w8 Planning to make a ghost this year?"
+	}
+	else
+	{
+		"Greetings,\w4 %username.\w8 Learning today?"
+		"Hello.\w8 Ready to make something cool?"
+	}
+}
+
+OnGhostChanged {OnBoot}
+
+OnClose
+{
+	"More learning another day."
+	--
+	"\-" //This is what makes the ghost close, do not remove this, and make sure you don't use a \e before this point or it won't close
+}

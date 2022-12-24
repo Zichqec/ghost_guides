@@ -1,0 +1,207 @@
+// * means no code to run in this module
+ModuleList : array
+{
+	"Module 00 - Overview,*"
+	"Module 01 - Basic Building Blocks"
+	"Module 02 - Arrays"
+	"Module 03 - Flow Control"
+	"Module 04 - Functions"
+	"Module 05 - Common Functions"
+	"Module 06 - File Management"
+	"Module 07 - Regular Expressions"
+	"Module 08 - The Preprocessor"
+	"Module 09 - SAORI"
+	"Module 10 - YAYA Libraries"
+	"Module 11 - Debugging"
+	"Module 12 - Final Thoughts,*"
+}
+
+
+// * means no code to run in this lesson
+LessonList : array_pool
+{
+	_module = TOINT(_argv[0])
+	case _module
+	{
+		when 0
+		{
+			"00 - What is this guide,*"
+			"01 - What is YAYA,*"
+			"02 - Initial Setup,*"
+			"03 - More Options in yaya.txt,*"
+		}
+		when 1
+		{
+			"00 - Function Structure,*"
+			"01 - Calling Functions"
+			"02 - Comments"
+			"03 - Data Types"
+			"04 - Variables"
+			"05 - Operators"
+			"06 - Order of Operations"
+			"07 - Comparisons"
+			"08 - Logical Operators"
+		}
+		when 2
+		{
+			"00 - General Purpose Arrays Pt 1"
+			"01 - General Purpose Arrays Pt 2"
+			"02 - Simple Arrays"
+			"03 - Multidimensional Arrays"
+		}
+		when 3
+		{
+			"00 - if elseif else"
+			"01 - case when others"
+			"02 - switch"
+			"03 - while loops"
+			"04 - for loops"
+			"05 - foreach loops"
+			"06 - continue break"
+			"07 - return and Output Candidates"
+			"08 - Brackets and Modifiers"
+		}
+		when 4
+		{
+			"00 - Parameters"
+			"01 - Functions vs SHIORI Events"
+			"02 - Thinking with Functions"
+			"03 - Pure Functions"
+			"04 - Embedded Elements"
+			"05 - Recursion"
+		}
+		when 5
+		{
+			"00 - String Manupulation"
+			"01 - Type Manipulation"
+			"02 - Variable Manipulation"
+			"03 - Array Manipulation"
+			"04 - Randomness"
+			"05 - EVAL"
+		}
+		when 6
+		{
+			"00 - Opening and Closing Files"
+			"01 - Reading Files"
+			"02 - Writing Files"
+			"03 - Deleting Files and Working with Directories"
+		}
+		when 7
+		{
+			"00 - What is Regex,*"
+			"01 - Character Sets"
+			"02 - Metacharacters"
+			"03 - Regex Functions"
+			"04 - More on the Subject"
+		}
+		when 8
+		{
+			"00 - What is the Preprocessor"
+			"01 - Debug Options"
+		}
+		when 9
+		{
+			"00 - What are SAORI,*"
+			"01 - SAORI-universal"
+			"02 - SAORI-basic"
+		}
+		when 10
+		{
+			"00 - YAYA as SHIORI"
+			"01 - YAYA as Other Things,*"
+		}
+		when 11
+		{
+			"00 - Peeking Behind the Curtain,*"
+			"01 - LOGGING"
+			"02 - Dissecting Error Messages,*"
+			"03 - Common Error Messages,*"
+			"04 - Emergency Mode,*"
+		}
+		when 12
+		{
+			"00 - What to Do Next,*"
+			"01 - Closing Remarks,*"
+		}
+	}
+}
+
+they
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"he"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"she"
+	}
+	else
+	{
+		"they"
+	}
+}
+
+them
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"him"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"her"
+	}
+	else
+	{
+		"them"
+	}
+}
+
+their
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"his"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"her"
+	}
+	else
+	{
+		"their"
+	}
+}
+
+theirs
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"his"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"hers"
+	}
+	else
+	{
+		"theirs"
+	}
+}
+
+themself
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"himself"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"herself"
+	}
+	else
+	{
+		"themself"
+	}
+}

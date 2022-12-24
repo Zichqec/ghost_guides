@@ -1,0 +1,15 @@
+charset,UTF-8
+
+name,Ghost Guides
+type,ghost
+
+shiori,yaya.dll
+
+craftman,Zichqec
+craftmanurl,https://zichqec.github.io/s-the-skeleton/
+
+sakura.name,YAYA Guide
+//kero.name,SERIKO Guide
+
+sstp.allowunspecifiedsend,0
+balloon,Notes

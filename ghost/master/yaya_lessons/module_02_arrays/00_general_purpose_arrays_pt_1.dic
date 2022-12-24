@@ -1,0 +1,245 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.CreateArray
+{
+	_colors = ("red","green","blue")
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.CreateArray
+{
+	_colors = ("red","green","blue")
+	_colors
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.CreateEmptyArray
+{
+	_colors = IARRAY
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.CreateEmptyArray
+{
+	_colors = IARRAY
+	_colors
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.MixedArray
+{
+	_array = (3,"red",2.7)
+	_array
+}
+
+******************************************************************/
+
+OnExample.M2.L0.MixedArray
+{
+	_array = (3,"red",2.7)
+	_array
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.AddToArray
+{
+	_colors = IARRAY
+	_colors ,= "red"
+	_colors ,= "green"
+	_colors ,= "blue"
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.AddToArray
+{
+	_colors = IARRAY
+	_colors ,= "red"
+	_colors ,= "green"
+	_colors ,= "blue"
+	_colors
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.SelectFromArray
+{
+	_colors = ("red","green","blue")
+	_colors[1]
+}
+
+******************************************************************/
+
+OnExample.M2.L0.SelectFromArray
+{
+	_colors = ("red","green","blue")
+	_colors[1]
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.UseFunctionAsIndex
+{
+	_colors = ("red","green","blue")
+	_colors[UsedAsIndex]
+}
+
+UsedAsIndex
+{
+	1 + 1
+}
+
+******************************************************************/
+
+OnExample.M2.L0.UseFunctionAsIndex
+{
+	_colors = ("red","green","blue")
+	_colors[UsedAsIndex]
+}
+
+UsedAsIndex
+{
+	1 + 1
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.IndexDirectly
+{
+	("red","green","blue")[1]
+}
+
+******************************************************************/
+
+OnExample.M2.L0.IndexDirectly
+{
+	("red","green","blue")[1]
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.AssignInMiddle
+{
+	_colors = ("red","green","blue")
+	_colors[1] ,= "yellow"
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.AssignInMiddle
+{
+	_colors = ("red","green","blue")
+	_colors[1] ,= "yellow"
+	_colors
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.ChangeElement
+{
+	_colors = ("red","green","blue")
+	_colors[2] = "yellow"
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.ChangeElement
+{
+	_colors = ("red","green","blue")
+	_colors[2] = "yellow"
+	_colors
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.AssignOutOfRange
+{
+	_colors = ("red","green","blue")
+	_colors[5] = "orange"
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.AssignOutOfRange
+{
+	_colors = ("red","green","blue")
+	_colors[5] = "orange"
+	_colors
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.RemoveElement
+{
+	_colors = ("red","green","blue")
+	_colors[1] = IARRAY
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.RemoveElement
+{
+	_colors = ("red","green","blue")
+	_colors[1] = IARRAY
+	_colors
+}
+
+
+
+/******************************************************************
+
+OnExample.M2.L0.BlankElement
+{
+	_colors = ("red","green","blue")
+	_colors[1] = ""
+	_colors
+}
+
+******************************************************************/
+
+OnExample.M2.L0.BlankElement
+{
+	_colors = ("red","green","blue")
+	_colors[1] = ""
+	_colors
+}

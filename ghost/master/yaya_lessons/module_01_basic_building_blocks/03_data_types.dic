@@ -1,0 +1,233 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.Integer
+{
+	10
+}
+
+******************************************************************/
+
+OnExample.M1.L3.Integer
+{
+	10
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.BinaryInteger
+{
+	0b1010
+}
+
+******************************************************************/
+
+OnExample.M1.L3.BinaryInteger
+{
+	0b1010
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.HexInteger
+{
+	0xa
+}
+
+******************************************************************/
+
+OnExample.M1.L3.HexInteger
+{
+	0xa
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.RealNumber
+{
+	3.14
+}
+
+******************************************************************/
+
+OnExample.M1.L3.RealNumber
+{
+	3.14
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.DoubleQuoteString
+{
+	"Hello, world!"
+}
+
+******************************************************************/
+
+OnExample.M1.L3.DoubleQuoteString
+{
+	"Hello, world!"
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.SingleQuoteString
+{
+	'Hello, world!'
+}
+
+******************************************************************/
+
+OnExample.M1.L3.SingleQuoteString
+{
+	'Hello, world!'
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.UseOtherQuotes
+{
+	"It's working!"
+}
+
+******************************************************************/
+
+OnExample.M1.L3.UseOtherQuotes
+{
+	"It's working!"
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.EscapeQuotes
+{
+	"Hello, ""world""!"
+}
+
+******************************************************************/
+
+OnExample.M1.L3.EscapeQuotes
+{
+	"Hello, ""world""!"
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.EscapeSingleQuotes
+{
+	'It''s working!'
+}
+
+******************************************************************/
+
+OnExample.M1.L3.EscapeSingleQuotes
+{
+	'It''s working!'
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.LinebreakInCode
+{
+	"Hello, /
+	world!"
+}
+
+******************************************************************/
+
+OnExample.M1.L3.LinebreakInCode
+{
+	"Hello, /
+	world!"
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.DoubleQuoteHeredocument
+{
+	<<"
+	Hello, 
+	world!
+	">>
+}
+
+******************************************************************/
+
+OnExample.M1.L3.DoubleQuoteHeredocument
+{
+	<<"
+	Hello, 
+	world!
+	">>
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.SingleQuoteHeredocument
+{
+	<<'
+	Hello, 
+	world!
+	'>>
+}
+
+******************************************************************/
+
+OnExample.M1.L3.SingleQuoteHeredocument
+{
+	<<'
+	Hello, 
+	world!
+	'>>
+}
+
+
+
+/******************************************************************
+
+OnExample.M1.L3.HereDocumentQuotes
+{
+	<<"
+	Hello, 
+	"world"!
+	">>
+}
+
+******************************************************************/
+
+OnExample.M1.L3.HereDocumentQuotes
+{
+	<<"
+	Hello, 
+	"world"!
+	">>
+}

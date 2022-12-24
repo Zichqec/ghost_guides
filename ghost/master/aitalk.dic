@@ -1,0 +1,17 @@
+OnAiTalk
+{
+	if CHAIN.IDName == ""
+	{
+		lastTalk = RandomTalk
+	}
+	else
+	{
+		lastTalk = ChainTalk
+	}
+	lastTalk
+}
+
+RandomTalk : nonoverlap_pool
+{
+	
+}

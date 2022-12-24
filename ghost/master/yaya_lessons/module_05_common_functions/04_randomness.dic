@@ -1,0 +1,96 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+/******************************************************************
+
+OnExample.M5.L4.RandomNumber
+{
+	_rand = RAND(10)
+	
+	"I'm thinking of the number... %(_rand)"
+}
+
+******************************************************************/
+
+OnExample.M5.L4.RandomNumber
+{
+	_rand = RAND(10)
+	
+	"I'm thinking of the number... %(_rand)"
+}
+
+
+
+/******************************************************************
+
+OnExample.M5.L4.ChangeRandomSeed
+{
+	void SRAND(0)
+	_rand = RAND(10)
+	
+	"I'm thinking of the number... %(_rand)"
+}
+
+******************************************************************/
+
+OnExample.M5.L4.ChangeRandomSeed
+{
+	void SRAND(0)
+	_rand = RAND(10)
+	
+	"I'm thinking of the number... %(_rand)"
+}
+
+
+
+/******************************************************************
+
+OnExample.M5.L4.RandomArrayElement
+{
+	_colors = ("red","green","blue")
+	_color = ANY(_colors)
+	
+	"My favorite color is %(_color)!"
+}
+
+******************************************************************/
+
+OnExample.M5.L4.RandomArrayElement
+{
+	_colors = ("red","green","blue")
+	_color = ANY(_colors)
+	
+	"My favorite color is %(_color)!"
+}
+
+
+
+/******************************************************************
+
+OnExample.M5.L4.TwoRandomElements
+{
+	_colors = ("red","green","blue")
+	_color1 = ANY(_colors)
+	_colors[LSO] = IARRAY //Erase the chosen color from the array so it can't be picked again
+	_color2 = ANY(_colors)
+	
+	"My favorite color is %(_color1)! Oh, but I also like %(_color2)..."
+	
+}
+
+******************************************************************/
+
+OnExample.M5.L4.TwoRandomElements
+{
+	_colors = ("red","green","blue")
+	_color1 = ANY(_colors)
+	_colors[LSO] = IARRAY //Erase the chosen color from the array so it can't be picked again
+	_color2 = ANY(_colors)
+	
+	"My favorite color is %(_color1)! Oh, but I also like %(_color2)..."
+	
+}

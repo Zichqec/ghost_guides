@@ -1,0 +1,264 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+/******************************************************************
+
+OnExample.M4.L4.RangedDeployment
+{
+	"It's %(season2)!"
+}
+
+season2
+{
+	case month
+	{
+		when 3-5
+		{
+			"spring"
+		}
+		when 6-8
+		{
+			"summer"
+		}
+		when 9-11
+		{
+			"autumn"
+		}
+		others //12, 1, 2
+		{
+			"winter"
+		}
+	}
+}
+
+******************************************************************/
+
+OnExample.M4.L4.RangedDeployment
+{
+	"It's %(season2)!"
+}
+
+season2
+{
+	case month
+	{
+		when 3-5
+		{
+			"spring"
+		}
+		when 6-8
+		{
+			"summer"
+		}
+		when 9-11
+		{
+			"autumn"
+		}
+		others //12, 1, 2
+		{
+			"winter"
+		}
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L4.DoesNotExpand
+{
+	'It''s %(season3)!' //Note that in this case we have to escape the apostrophe in "it's" so we don't break the string
+}
+
+season3
+{
+	case month
+	{
+		when 3-5
+		{
+			"spring"
+		}
+		when 6-8
+		{
+			"summer"
+		}
+		when 9-11
+		{
+			"autumn"
+		}
+		others //12, 1, 2
+		{
+			"winter"
+		}
+	}
+}
+
+******************************************************************/
+
+OnExample.M4.L4.DoesNotExpand
+{
+	'It''s %(season3)!' //Note that in this case we have to escape the apostrophe in "it's" so we don't break the string
+}
+
+season3
+{
+	case month
+	{
+		when 3-5
+		{
+			"spring"
+		}
+		when 6-8
+		{
+			"summer"
+		}
+		when 9-11
+		{
+			"autumn"
+		}
+		others //12, 1, 2
+		{
+			"winter"
+		}
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L4.ShowDrawback
+{
+	"Hey, good to see you today friend!\e%(friendship += 1)"
+	"Oh, hey."
+}
+
+******************************************************************/
+
+OnExample.M4.L4.ShowDrawback
+{
+	"Hey, good to see you today friend!\e%(friendship += 1)"
+	"Oh, hey."
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L4.WithoutParenthesis
+{
+	_c = "red"
+	_col = "blue"
+	_color = "green"
+	"I like %_color"
+}
+
+******************************************************************/
+
+OnExample.M4.L4.WithoutParenthesis
+{
+	_c = "red"
+	_col = "blue"
+	_color = "green"
+	"I like %_color"
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L4.ChangingOutput
+{
+	_col = "blue"
+	"I like %_color "
+	--
+	_color = "green"
+	"I like %_color"
+}
+
+******************************************************************/
+
+OnExample.M4.L4.ChangingOutput
+{
+	_col = "blue"
+	"I like %_color "
+	--
+	_color = "green"
+	"I like %_color"
+}
+
+
+
+/******************************************************************
+
+OnExample.M4.L4.RecallResult
+{
+	"I like %color. Isn't %[0] great? I like %food too, I want some %[0] %[1]."
+}
+
+color
+{
+	"red"
+	"green"
+	"blue"
+}
+
+food
+{
+	"cheese"
+	"whipped cream"
+	"mustard"
+}
+
+******************************************************************/
+
+OnExample.M4.L4.RecallResult
+{
+	"I like %color. Isn't %[0] great? I like %food too, I want some %[0] %[1]."
+}
+
+color
+{
+	"red"
+	"green"
+	"blue"
+}
+
+food
+{
+	"cheese"
+	"whipped cream"
+	"mustard"
+}
+
+
+
+//This one causes an error when the ghost loads if you uncomment it! The ghost will still run, but it will make an annoying sound every time you reload.
+/******************************************************************
+
+OnExample.M4.L4.IncorrectRecall
+{
+	"I like %colorB. Isn't %[0] great? I like %foodB too, "
+	--
+	"I want some %[0] %[1]."
+}
+
+colorB
+{
+	"red"
+	"green"
+	"blue"
+}
+
+foodB
+{
+	"cheese"
+	"whipped cream"
+	"mustard"
+}
+
+******************************************************************/

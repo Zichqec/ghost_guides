@@ -1,0 +1,6 @@
+Lorem ipsum dolor sit amet
+Hello, world!
+Can I get a "Hello, world!"?
+How many Hello, world!s can I put in here?
+If you're reading this, hello! You're doing a great job!
+Don't think so? I bet you are if you're curious enough to take a peek in this file of Hello, world!s!

@@ -1,0 +1,121 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+/******************************************************************
+
+OnExample.M3.L2.SwitchHours
+{
+	switch hour
+	{
+		"It's midnight!" //0
+		"It's 1AM!" //1
+		"It's 2AM!" //2
+		"It's 3AM!" //3
+		"It's 4AM!" //4
+		"It's 5AM!" //5
+		"It's 6AM!" //6
+		"It's 7AM!" //7
+		"It's 8AM!" //8
+		"It's 9AM!" //9
+		"It's 10AM!" //10
+		"It's 11AM!" //11
+		"It's noon!" //12
+		"It's 1PM!" //13
+		"It's 2PM!" //14
+		"It's 3PM!" //15
+		"It's 4PM!" //16
+		"It's 5PM!" //17
+		"It's 6PM!" //18
+		"It's 7PM!" //19
+		"It's 8PM!" //20
+		"It's 9PM!" //21
+		"It's 10PM!" //22
+		"It's 11PM!" //23
+	}
+}
+
+******************************************************************/
+
+OnExample.M3.L2.SwitchHours
+{
+	switch hour
+	{
+		"It's midnight!" //0
+		"It's 1AM!" //1
+		"It's 2AM!" //2
+		"It's 3AM!" //3
+		"It's 4AM!" //4
+		"It's 5AM!" //5
+		"It's 6AM!" //6
+		"It's 7AM!" //7
+		"It's 8AM!" //8
+		"It's 9AM!" //9
+		"It's 10AM!" //10
+		"It's 11AM!" //11
+		"It's noon!" //12
+		"It's 1PM!" //13
+		"It's 2PM!" //14
+		"It's 3PM!" //15
+		"It's 4PM!" //16
+		"It's 5PM!" //17
+		"It's 6PM!" //18
+		"It's 7PM!" //19
+		"It's 8PM!" //20
+		"It's 9PM!" //21
+		"It's 10PM!" //22
+		"It's 11PM!" //23
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L2.SwitchBrackets
+{
+	_num = 2
+	_somevar = 0
+	_someothervar = 0
+	
+	switch _num
+	{
+		"Hello, world!"
+		{
+			_somevar = 1
+			"Hi!"
+		}
+		{
+			_someothervar = 1
+			"It's me!"
+		}
+	}
+}
+
+******************************************************************/
+
+OnExample.M3.L2.SwitchBrackets
+{
+	_num = 2
+	_somevar = 0
+	_someothervar = 0
+	
+	switch _num
+	{
+		"Hello, world!"
+		{
+			_somevar = 1
+			"Hi!"
+		}
+		{
+			_someothervar = 1
+			"It's me!"
+		}
+	}
+}
+
+
+

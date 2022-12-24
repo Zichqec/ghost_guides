@@ -1,0 +1,153 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+
+/******************************************************************
+
+OnExample.M7.L3.ReGrep
+{
+	_expression = "th"
+	_string = "the most important thing is to breathe"
+	RE_GREP(_string,_expression)
+}
+
+******************************************************************/
+
+OnExample.M7.L3.ReGrep
+{
+	_expression = "th"
+	_string = "the most important thing is to breathe"
+	RE_GREP(_string,_expression)
+}
+
+
+
+/******************************************************************
+
+OnExample.M7.L3.ReReplace
+{
+	_expression = "colou?r"
+	_string = "My favorite color is purple"
+	RE_REPLACE(_string,_expression,"hue")
+}
+
+******************************************************************/
+
+OnExample.M7.L3.ReReplace
+{
+	_expression = "colou?r"
+	_string = "My favorite color is purple"
+	RE_REPLACE(_string,_expression,"hue")
+}
+
+
+
+/******************************************************************
+
+OnExample.M7.L3.ReGetString
+{
+	_expression = "(favou?rite) (colou?r)"
+	_string = "My favorite color is purple"
+	void RE_SEARCH(_string,_expression)
+	RE_GETSTR[1]
+}
+
+******************************************************************/
+
+OnExample.M7.L3.ReGetString
+{
+	_expression = "(favou?rite) (colou?r)"
+	_string = "My favorite color is purple"
+	void RE_SEARCH(_string,_expression)
+	RE_GETSTR[1]
+}
+
+
+
+/******************************************************************
+
+OnExample.M7.L3.ReGetPosition
+{
+	_expression = "(favou?rite) (colou?r)"
+	_string = "My favorite color is purple"
+	void RE_SEARCH(_string,_expression)
+	RE_GETPOS[2]
+}
+
+******************************************************************/
+
+OnExample.M7.L3.ReGetPosition
+{
+	_expression = "(favou?rite) (colou?r)"
+	_string = "My favorite color is purple"
+	void RE_SEARCH(_string,_expression)
+	RE_GETPOS[2]
+}
+
+
+
+/******************************************************************
+
+OnExample.M7.L3.ReGetLength
+{
+	_expression = "(favou?rite) (colou?r)"
+	_string = "My favorite color is purple"
+	void RE_SEARCH(_string,_expression)
+	RE_GETLEN[2]
+}
+
+******************************************************************/
+
+OnExample.M7.L3.ReGetLength
+{
+	_expression = "(favou?rite) (colou?r)"
+	_string = "My favorite color is purple"
+	void RE_SEARCH(_string,_expression)
+	RE_GETLEN[2]
+}
+
+
+
+/******************************************************************
+
+OnExample.M7.L3.ReArraySearch
+{
+	_colors = ("red","orange","yellow","green","cyan","blue","purple","magenta")
+	_expression = "a"
+	RE_ASEARCHEX(_expression,_colors)
+}
+
+******************************************************************/
+
+OnExample.M7.L3.ReArraySearch
+{
+	_colors = ("red","orange","yellow","green","cyan","blue","purple","magenta")
+	_expression = "a"
+	RE_ASEARCHEX(_expression,_colors)
+}
+
+
+
+/******************************************************************
+
+OnExample.M7.L3.ReOption
+{
+	_expression = "colou?r"
+	_string = "COLOR"
+	void RE_OPTION("i")
+	RE_MATCH(_string,_expression)
+}
+
+******************************************************************/
+
+OnExample.M7.L3.ReOption
+{
+	_expression = "colou?r"
+	_string = "COLOR"
+	void RE_OPTION("i")
+	RE_MATCH(_string,_expression)
+}

@@ -1,0 +1,215 @@
+//Separate from the menus because you could put other interactions here
+OnMouseDoubleClick
+{
+	if reference5 == 0 //reference5 is the mouse button being clicked, in this case a left click
+	{
+		//reference3 is which character is being clicked
+		if reference3 == 0; OnSakuraMenu("start")
+		//else; OnKeroMenu("start")
+	}
+}
+
+OnMouseMove
+{
+	if reference4 != ""
+	{
+		stroke++
+		
+		if stroke % 40 == 0
+		{
+			if reference3 == 0; OnMouseMove.Sakura
+			//else; OnMouseMove.Kero
+		}
+	}
+}
+
+OnMouseMove.Sakura : nonoverlap_pool
+{
+	if reference4 == "head"
+	{
+		"\0\s[0]This is not condusive to learning."
+		"\0\s[0]This is not a way to run example code."
+		"\0\s[0]Am I being helpful?\w8 Is that it?"
+		"\0\s[0]Don't get too attached,\w4 I am only a placeholder."
+		"\0\s[0]I'm not supposed to break character."
+		"\0\s[0]Why is this of interest to you?"
+		"\0\s[0]This hitbox isn't even mapped to me specifically."
+		"\0\s[0]Am I supposed to react to this?"
+		"\0\s[0]If you want to peek at the petting code for this ghost,\w4 it's in main.dic.\w8 It makes use of modulus,\w4 and modulus is cool."
+		"\0\s[0]Bwop."
+		if IsEmergencyMode
+		{
+			"\0\s[0]I can't fix the errors for you."
+			"\0\s[0]I cannot fix these errors."
+			"\0\s[0]This code is yours to fix,\w4 I can only provide resources."
+		}
+	}
+}
+
+// OnMouseMove.Kero
+// {
+	// if reference4 == "head"
+	// {
+		// "\1Petting..."
+	// }
+// }
+
+OnMouseLeaveAll
+{
+	stroke = 0
+}
+
+//This is what makes %(embedded_elements) work in script input
+OnTranslate
+{
+	_talk = reference0
+	
+	if reference1 == "" && reference2 == "" //If this is from the input box
+	{ //send input box : no event (ref2) , no special flag (ref1)
+		_talk = EVAL('"' + REPLACE(_talk,'"','""') + '"')
+	}
+	
+	_to_replace = (/
+	
+	"@Zichqec|\_a[https://zichqec.github.io/s-the-skeleton/]Zichqec\_a",/
+	"@YAYA Fundamentals|\_a[https://zichqec.github.io/YAYA_Fundamentals/]YAYA Fundamentals\_a",/
+	
+	)
+	
+	foreach _to_replace; _replace
+	{
+		_replace = SPLIT(_replace,"|")
+		_talk = REPLACE(_talk,_replace[0],_replace[1])
+	}
+	
+	TOSTR(_talk)
+}
+
+OnAnchorSelect
+{
+	if StartsWith(reference0,"http://") || StartsWith(reference0,"https://"); "\j[""%(reference0)""]"
+}
+
+//Hotkeys
+OnKeyPress
+{
+	if reference0 == "t"; OnAiTalk
+	elseif reference0 == "r"; lastTalk
+	elseif reference0 == "f1"; "\![open,readme]"
+}
+
+OnInitialize
+{
+	EmergencyWarningGiven = 0
+}
+
+OnSecondChange : all
+{
+	if IsEmergencyMode && !EmergencyWarningGiven
+	{
+		EmergencyWarningGiven = 1
+		
+		"\_q%(FirstError)"
+	}
+}
+
+OnXUkagakaLinkOpen
+{
+	if IsEmergencyMode
+	{
+		"\_qCan't run example code while there is an error in the lesson files.\n\n%(FirstError)"
+	}
+	else
+	{
+		LOGGING("reference: %(reference)")
+		_ref = SPLIT(reference0,".")
+		if _ref[0] == "OnExample"
+		{
+			_num = TOINT(ERASE(_ref[1],0,1))
+			_lessonnum = TOINT(ERASE(_ref[2],0,1))
+			_function = _ref[3]
+			
+			LOGGING("_num: %(_num)")
+			LOGGING("_lessonnum: %(_lessonnum)")
+			LOGGING("_function: %(_function)")
+			if  _num >= 0 && _num <= 11
+			{
+				// _args = ""
+				// if ":" _in_ reference0
+				// {
+					// _info = SPLIT(_function,":")
+					// _info[0] = IARRAY
+					// _function = SPLIT(_function,":")[0]
+					// LOGGING("_info: %(_info)")
+					// LOGGING("_function: %(_function)")
+					// foreach _info; _i
+					// {
+						// _args += ",""%(_i)"""
+					// }
+				// }
+				//"\![raise,OnRunExampleCode,""%(_num)"",""%(_lessonnum)"",""%(_function)""%(_args)]"
+				"\![raise,OnRunExampleCode,""%(_num)"",""%(_lessonnum)"",""%(_function[0,':'])"",from link]"
+			}
+		}
+	}
+}
+
+//Network update url. If you're using github I will urge you to use the raw.githubusercontent link and not github.io, it'll save you a lot of headache. Also make sure the url ends with a / or it'll give a warning
+On_homeurl
+{
+	"https://raw.githubusercontent.com/Zichqec/ghost_guides/main/"
+}
+
+On_recommendrootbutton.caption
+{
+	"Useful links"
+}
+
+On_sakura.recommendsites
+{
+	FormatLinks(recommendsites_sakura)
+}
+
+//These are the websites linked in the top option of the right click menu. Add your websites here! Follow the format carefully here, on the left is the name you want to display, on the right is the url you want it to link to. You could make this a single list as well, as long as it alternates between name, url, name, url...
+recommendsites_sakura : array
+{
+	"YAYA Fundamentals";			"https://zichqec.github.io/YAYA_Fundamentals/"
+	"Zi's Ukagaka Hub";				"https://zichqec.github.io/s-the-skeleton/"
+	"Ghost Guides Repository";		"https://github.com/Zichqec/ghost_guides"
+}
+
+//Caption for the second list of websites
+On_portalrootbutton.caption
+{
+	"Reference Sites"
+}
+
+//You can make these anything you like. I've set them to link to my template, Zarla's template, and anything else helpful for making ghosts.
+On_sakura.portalsites 
+{
+	FormatLinks(portalsites_sakura)
+}
+
+//Same deal as above with the formatting.
+portalsites_sakura : array
+{
+	"AYAYA (YAYA Wiki)"; 					"http://emily.shillest.net/ayaya/index.php?"
+	"BTS"; 									"http://ssp.shillest.net/bts/my_view_page.php"
+	"SSP"; 									"http://ssp.shillest.net/"
+	"Ukadoc"; 								"https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html"
+	"Ukagaka Dream Team Wiki"; 				"https://ukagakadreamteam.com/wiki/home"
+	"YAYA-shiori Repository"; 				"https://github.com/YAYA-shiori"
+	"Zarla's Ghost Template Walkthrough";	"http://www.ashido.com/ukagaka/walkthrough.html"
+}
+
+//Takes an array of alternating names and urls, and formats them for use with the right click menu
+FormatLinks : all
+{
+	for _i = 0; _i < ARRAYSIZE(_argv); _i++
+	{
+		_argv[_i] //Add the link/title
+		//Alternate between adding %ASC(1) or %ASC(2)
+		if _i % 2 == 1; "%ASC(2)"
+		else; "%ASC(1)"
+	}
+}

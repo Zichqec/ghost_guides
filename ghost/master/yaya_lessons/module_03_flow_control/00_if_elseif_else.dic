@@ -1,0 +1,267 @@
+/*—————————————————————————————————————————————————————————————————————————————————————————————————
+REMINDER: Functions in these files are prefixed with what module number and lesson number they belong to. You don't need to make your names this complex! It's just because this ghost has to cover so much and I want to avoid any possible name collisions.
+
+Functions will be provided in the order they are written in each lesson. Each one will be written twice; there is a commented out version, and a normal version. This is so you can edit the normal version as much as you like, and you'll still have the original in case something goes wrong or you need it for reference!
+—————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+
+/******************************************************************
+
+OnExample.M3.L0.SingleOperation
+{
+	hour == 0
+}
+
+******************************************************************/
+
+OnExample.M3.L0.SingleOperation
+{
+	hour == 0
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L0.SimpleIfCheck
+{
+	if hour == 0 //If the hour is equal to 0, which is 12AM in 12 hour time
+	{
+		"It's midnight!"
+	}
+}
+
+******************************************************************/
+
+OnExample.M3.L0.SimpleIfCheck
+{
+	if hour == 0 //If the hour is equal to 0, which is 12AM in 12 hour time
+	{
+		"It's midnight!"
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L0.NestedIfCheck
+{
+	if hour == 0 //If it's midnight
+	{
+		if minute == 30 //If it's half past the hour
+		{
+			"It's 12:30AM!"
+		}
+	}
+}
+
+******************************************************************/
+
+OnExample.M3.L0.NestedIfCheck
+{
+	if hour == 0 //If it's midnight
+	{
+		if minute == 30 //If it's half past the hour
+		{
+			"It's 12:30AM!"
+		}
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L0.IfWithElse
+{
+	if hour == 0 //If it's midnight
+	{
+		"It's midnight!"
+	}
+	else //If it's any time other than midnight
+	{
+		"It's not midnight..."
+	}
+}
+
+******************************************************************/
+
+OnExample.M3.L0.IfWithElse
+{
+	if hour == 0 //If it's midnight
+	{
+		"It's midnight!"
+	}
+	else //If it's any time other than midnight
+	{
+		"It's not midnight..."
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L0.IfElseifElse
+{
+	if hour == 0 //If it's midnight
+	{
+		"It's midnight!"
+	}
+	elseif hour == 12 //If it's noon
+	{
+		"It's noon!"
+	}
+	else
+	{
+		"It's not midnight or noon..."
+	}
+}
+
+******************************************************************/
+
+OnExample.M3.L0.IfElseifElse
+{
+	if hour == 0 //If it's midnight
+	{
+		"It's midnight!"
+	}
+	elseif hour == 12 //If it's noon
+	{
+		"It's noon!"
+	}
+	else
+	{
+		"It's not midnight or noon..."
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L0.SeveralElseifs
+{
+	if hour == 0
+	{
+		"It's midnight!"
+	}
+	elseif hour == 4
+	{
+		"It's 4AM!"
+	}
+	elseif hour == 8
+	{
+		"It's 8AM!"
+	}
+	elseif hour == 12
+	{
+		"It's noon!"
+	}
+	elseif hour == 16
+	{
+		"It's 4PM!"
+	}
+	elseif hour == 20
+	{
+		"It's 8PM!"
+	}
+}
+
+******************************************************************/
+
+OnExample.M3.L0.SeveralElseifs
+{
+	if hour == 0
+	{
+		"It's midnight!"
+	}
+	elseif hour == 4
+	{
+		"It's 4AM!"
+	}
+	elseif hour == 8
+	{
+		"It's 8AM!"
+	}
+	elseif hour == 12
+	{
+		"It's noon!"
+	}
+	elseif hour == 16
+	{
+		"It's 4PM!"
+	}
+	elseif hour == 20
+	{
+		"It's 8PM!"
+	}
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L0.WithoutBrackets
+{
+	if hour == 0
+		"It's midnight!"
+	elseif hour == 4
+		"It's 4AM!"
+	elseif hour == 8
+		"It's 8AM!"
+	elseif hour == 12
+		"It's noon!"
+	elseif hour == 16
+		"It's 4PM!"
+	elseif hour == 20
+		"It's 8PM!"
+}
+
+******************************************************************/
+
+OnExample.M3.L0.WithoutBrackets
+{
+	if hour == 0
+		"It's midnight!"
+	elseif hour == 4
+		"It's 4AM!"
+	elseif hour == 8
+		"It's 8AM!"
+	elseif hour == 12
+		"It's noon!"
+	elseif hour == 16
+		"It's 4PM!"
+	elseif hour == 20
+		"It's 8PM!"
+}
+
+
+
+/******************************************************************
+
+OnExample.M3.L0.WithSemicolons
+{
+	if hour == 0; "It's midnight!"
+	elseif hour == 4; "It's 4AM!"
+	elseif hour == 8; "It's 8AM!"
+	elseif hour == 12; "It's noon!"
+	elseif hour == 16; "It's 4PM!"
+	elseif hour == 20; "It's 8PM!"
+}
+
+******************************************************************/
+
+OnExample.M3.L0.WithSemicolons
+{
+	if hour == 0; "It's midnight!"
+	elseif hour == 4; "It's 4AM!"
+	elseif hour == 8; "It's 8AM!"
+	elseif hour == 12; "It's noon!"
+	elseif hour == 16; "It's 4PM!"
+	elseif hour == 20; "It's 8PM!"
+}
+
+
+
