@@ -25,8 +25,8 @@ dicdir, yaya_lessons\module_07_regular_expressions
 dicdir, yaya_lessons\module_09_saori
 dicdir, yaya_lessons\module_10_yaya_libraries
 dicdir, yaya_lessons\module_11_debugging
-
 dicdir, yaya_lessons\module_08_the_preprocessor
+
 //Module 8 is last because it has some globaldefine commands! I don't want it to accidentally wonk up people's code, so there is less risk this way
 
 msglang,english

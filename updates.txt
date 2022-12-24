@@ -15,7 +15,7 @@ file,ghost/master/saori/window_info_readme.txt6ce8e394a553baa370f67211af2b4fae
 file,ghost/master/tools.dic44d9eb773703fb4564cf8efb3985f776size=2041date=2022-12-20T04:31:59
 file,ghost/master/word.dic817eac9e58587c7784bae75e125577c0size=3352date=2022-12-20T04:33:06
 file,ghost/master/yaya.dll56e3af56c88e696cea1f39d53b239cefsize=880640date=2022-09-10T18:18:59
-file,ghost/master/yaya.txt8bfe0af3388b4799f5c166b33952d9basize=1379date=2022-12-23T22:03:09
+file,ghost/master/yaya.txt9386c3c6f7b986fd2a54cbb1d8331728size=1391date=2022-12-23T22:48:59
 file,ghost/master/yaya_base/_loading_order.txt9c350c2c9c08f635bff5eaae149af8c8size=103date=2022-10-26T21:00:32
 file,ghost/master/yaya_base/compatible.dic4f8b1e8c8c08dc44e70b1bd4f52a1affsize=4297date=2022-10-26T21:00:32
 file,ghost/master/yaya_base/config.dicacc9b7c3f25c4e564abdac847f103cddsize=2648date=2022-10-26T21:00:32
