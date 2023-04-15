@@ -1,11 +1,8 @@
 charset,OSNative
-file,developer_options.txt0c5a76ed178b9da73eef491add26cb57size=119date=2022-12-23T23:01:10
 file,ghost/master/aitalk.dic01b07024a275d968ff9d644c6464cd94size=162date=2022-12-01T22:32:40
 file,ghost/master/boot.dic6319ff2eadd1177a0637b79bc94547f4size=1018date=2022-12-20T06:15:02
 file,ghost/master/descript.txt58521da707b19088b08349d83b1429a5size=238date=2022-12-18T18:39:46
 file,ghost/master/examplefiles/readexample.txtc0553c4f988117a5b2718e37b7393570size=276date=2022-12-14T01:18:56
-file,ghost/master/graphs/example_graph.png0e6423e55423cef73a5b92d4ec7ce810size=12830date=2022-12-23T05:13:37
-file,ghost/master/graphs/test.png645a32e5a4a10992b53685a7eaac7090size=5777date=2022-12-20T22:58:19
 file,ghost/master/main.dic8e0afc3028bd61d005b74734fd8c2de3size=5871date=2023-04-14T22:21:44
 file,ghost/master/meta.dic5abf0a258c24f24ff188265d20a1c836size=3819date=2022-12-20T05:24:21
 file,ghost/master/sakura_menu.dicc855c79b5ea8addb728437e3cb2fe17asize=11277date=2022-12-20T06:15:08
@@ -17,7 +14,7 @@ file,ghost/master/saori/window_info_readme.txt6ce8e394a553baa370f67211af2b4fae
 file,ghost/master/tools.dic3c94afbe2db50bd20b04964427c86adcsize=2041date=2023-04-14T22:25:51
 file,ghost/master/word.dic817eac9e58587c7784bae75e125577c0size=3352date=2022-12-20T05:33:06
 file,ghost/master/yaya.dll56e3af56c88e696cea1f39d53b239cefsize=880640date=2022-09-10T19:18:59
-file,ghost/master/yaya.txtc09384ff591111eea9c567772c380ffcsize=1352date=2022-12-20T05:34:14
+file,ghost/master/yaya.txtd5db6b32de44bc9207e514df8823d8d6size=1364date=2023-04-14T22:31:16
 file,ghost/master/yaya_base/_loading_order.txt9c350c2c9c08f635bff5eaae149af8c8size=103date=2023-04-02T10:34:13
 file,ghost/master/yaya_base/compatible.dic4f8b1e8c8c08dc44e70b1bd4f52a1affsize=4297date=2023-04-02T10:34:13
 file,ghost/master/yaya_base/config.dic9dae7f666d2a30ddede6093c7d2a5750size=2627date=2023-04-14T16:03:05
