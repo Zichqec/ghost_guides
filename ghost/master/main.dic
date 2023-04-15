@@ -113,7 +113,7 @@ OnSecondChange : all
 	}
 }
 
-OnXUkagakaLinkOpen
+ExternalEvent.OnXUkagakaLinkOpen
 {
 	if IsEmergencyMode
 	{

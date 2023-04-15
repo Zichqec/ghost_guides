@@ -10,16 +10,26 @@ Functions will be provided in the order they are written in each lesson. Each on
 
 OnExample.M10.L0.RaiseFriendshipBasedOnDialogue
 {
-	"I really like you, %username.\e:eval=friendship += 1"
+	"I really like you, %username.\![raise,OnRaiseFriendshipBy1]"
 	"Hi, %username."
+}
+
+OnRaiseFriendshipBy1
+{
+	friendship += 1
 }
 
 ******************************************************************/
 
 OnExample.M10.L0.RaiseFriendshipBasedOnDialogue
 {
-	"I really like you, %username.\e:eval=friendship += 1"
+	"I really like you, %username.\![raise,OnRaiseFriendshipBy1]"
 	"Hi, %username."
+}
+
+OnRaiseFriendshipBy1
+{
+	friendship += 1
 }
 
 
